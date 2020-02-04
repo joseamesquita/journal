@@ -18,12 +18,17 @@ $(document).ready(function () {
     var consTitle = output.Cons(output.title);
     var consSentence = output.Cons(output.sentence);
 
+    var teaserTitle = output.getTeaser(output.title);
+    var teaserSentence = output.getTeaser(output.sentence);
+
     $('#header').text(output.title + " " + titleLength);
     $('#body').text(output.sentence + " " + sentenceLength);
     $('#vowelTitle').text("vowels in the title: " + vowelTitle);
     $('#vowelSentence').text("vowels in the sentence: " + vowelSentence);
     $('#consTitle').text("cons in the title: " + consTitle);
     $('#consSentence').text("cons in the sentence: " + consSentence);
+    $('#teaserTitle').text("teaser for Title: " + teaserTitle);
+    $('#teaserSentence').text("teaser for Sentence: " + teaserSentence);
 
   });
 });

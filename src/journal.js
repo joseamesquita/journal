@@ -38,3 +38,19 @@ Journal.prototype.Cons = function(word){
 }
   return totalC.length;
 }
+
+Journal.prototype.getTeaser = function(word) {
+  var teaser = "";
+  var wordArray = word.split(" ");
+  console.log(wordArray)
+  console.log(wordArray.length)
+  if (wordArray.length >= 8) {
+    for (var i = 0; i < 8; i++) {
+      teaser = teaser + " " + wordArray[i];
+      console.log(wordArray[i])
+    } 
+  } else {
+    return wordArray[0]; 
+  }
+  return teaser;
+}
